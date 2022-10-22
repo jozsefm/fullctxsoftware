@@ -1,7 +1,7 @@
 {
-  "name": "fullcontextdevelopment.com",
+  "name": "fullcontextsoftwaredevelopment",
   "version": "0.0.1",
-  "description": "Course site",
+  "description": "Online Book",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -10,8 +10,8 @@
     "gen-prev": "node ./scripts/sqip.js",
     "lint": "next lint"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "József Miskolczy",
+  "license": "Apache-2.0",
   "dependencies": {
     "@aws-sdk/client-ses": "^3.8.1",
     "@chakra-ui/icons": "1.0.16",
