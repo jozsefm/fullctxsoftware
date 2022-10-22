@@ -1,0 +1,89 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers" : [
+        {
+          "key" : "X-Content-Type-Options",
+          "value" : "nosniff"
+        },
+        {
+          "key" : "X-Frame-Options",
+          "value" : "DENY"
+        },
+        {
+          "key" : "X-XSS-Protection",
+          "value" : "1; mode=block"
+        },
+        {
+          "key" : "Referrer-Policy",
+          "value" : "strict-origin-when-cross-origin"
+        },
+        {
+          "key" : "Strict-Transport-Security",
+          "value" : "max-age=1000"
+        },
+        {
+          "key" : "Content-Security-Policy",
+          "value" : "upgrade-insecure-requests"
+        },
+        {
+          "key" : "s-maxage",
+          "value" : "0"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/scripts/js/ps.js", "destination": "https://plausible.io/js/plausible.js" },
+    { "source": "/scripts/api/event", "destination": "https://plausible.io/api/event" }
+  ],
+	"redirects": [
+    { "source": "/roadmap", "destination": "/code-to-money-roadmap" }
+  ],
+  "functions": {
+		"pages/api/account/*.ts": {
+			"memory": 256
+		},
+		"pages/api/auth/*.ts": {
+			"memory": 256
+		},
+		"pages/api/newsletter/*.ts": {
+			"memory": 256
+		},
+		"pages/api/paddle/*.ts": {
+			"memory": 256
+		},
+		"pages/api/profile/*.ts": {
+			"memory": 256
+		},
+		"pages/api/reset/*.ts": {
+			"memory": 256
+		},
+		"pages/api/update-email/*.ts": {
+			"memory": 256
+		},
+		"pages/api/captcha.ts": {
+			"memory": 256
+		},
+		"pages/api/feedback.ts": {
+			"memory": 256
+		},
+		"pages/api/heartbeat.ts": {
+			"memory": 256
+		},
+		"pages/api/logout.ts": {
+			"memory": 256
+		},
+		"pages/api/team.ts": {
+			"memory": 256
+		},
+		"pages/book/*.tsx": {
+			"memory": 384
+		},
+		"pages/home.tsx": {
+			"memory": 256
+		}
+	}
+}

@@ -1,0 +1,6 @@
+export enum ModalViews {
+  SIGNIN_VIEW = 'SIGNIN_VIEW',
+  FORGOT_VIEW = 'FORGOT_VIEW',
+  CAPTCHA_VIEW = 'CAPTCHA_VIEW',
+}
+  

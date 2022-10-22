@@ -1,0 +1,8 @@
+node_modules/*
+.next
+.env*
+.vercel
+.vscode
+/email/temp.html
+tsconfig.tsbuildinfo
+yarn-error.log
